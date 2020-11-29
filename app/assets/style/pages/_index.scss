@@ -1,0 +1,454 @@
+//section
+.section-padding{
+    padding: 64px 0 80px 0;
+    @include pad{
+        padding: 40px 0;
+    }
+    @include mobile{
+        padding: 32px 0;
+    }
+}
+//container
+.container{
+    max-width: 1110px;
+    height: 100%;
+    margin: 0 auto;
+    @include pad{
+        padding: 0 39px;
+        margin: 0 auto;
+    }
+    @include mobile{
+        padding: 0 15px;
+    }
+}
+//section-title
+.section-title{
+    text-align: center;
+    margin-bottom: 32px;
+    @include pad{
+        font-size: 32px;
+    }
+    @include mobile{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+.section-describe{
+    margin-bottom: 20px;
+}
+//banner
+.index-banner{
+    background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true) no-repeat center center / cover;
+    height: 840px;
+    @include mobile{
+        height: 394px;
+    }
+        .fz-64{
+            text-align: right;
+        }
+        .fz-36{
+            font-weight: normal;
+        }
+}
+@media (max-width: 992px){
+    .index-banner{
+        h2{
+            margin-right: 40px;
+        }
+        .fz-64{
+            font-size: 48px;
+        }
+        .fz-36{
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .index-banner{
+        h2{
+            margin-right: 0px;
+        }
+        .fz-64{
+            font-size: 32px;
+        }
+        .fz-36{
+            font-size: 16px;
+        }
+    }
+}
+//profession list
+.profession{
+    background-color: $tertiary;
+}
+.profession-list{
+    align-items: baseline;
+    &_item{
+        width: 208px;
+        text-align: center;
+        img{
+            margin-bottom: 40px;
+        }
+        &:nth-child(n+2){
+            margin-left: 76px;
+        }
+        &:last-child img{
+            margin: 15px 0 45px 0;
+        }
+        h3{
+            margin-bottom: 4px;
+        }
+        p{
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+    @include pad{
+        flex-wrap: wrap;
+        &_item{
+            width: 237px;
+            img{
+                width: 80px;
+                margin-bottom: 16px;
+            }
+            &:nth-child(odd){
+                margin-left: 0;
+            }
+            &:nth-child(even){
+                margin-left: 123px;
+            }
+            &:first-child, &:nth-child(3){
+                margin-bottom: 40px;
+            }
+            h3{
+                margin-bottom: 8px;
+            }
+        }
+    }
+    @include mobile{
+        &_item{
+            &:nth-child(odd){
+                margin-left: 0;
+            }
+            &:nth-child(even){
+                margin-left: 0;
+            }
+            &:not(:last-child){
+                margin-bottom: 40px;
+            }
+            &:last-child{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+//classic
+.classic-list{
+    &_item{
+        img{
+            width: 635px;
+        }
+        &:nth-child(1), &:nth-child(2){
+            margin-bottom: 32px;
+        }
+        &:nth-child(2){
+            flex-direction: row-reverse;
+            img{
+                filter: grayscale(100%);
+                transition: all .2s;
+            }
+            img:hover{
+                filter: grayscale(0%);
+            }
+        }
+        &-title{
+            margin:0 30px;
+        }
+        &-icon{
+            margin-right: 8px;
+            width: 48px;
+            height: 48px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    @include pad{
+        &_item{
+            img{
+                width: 320px;
+            }
+            &:nth-child(1), &:nth-child(2){
+                margin-bottom: 8px;
+            }
+            &:nth-child(2){
+                flex-direction: row;
+            }
+            &-icon{
+                width: 32px;
+                height: 32px;
+            }
+            .fz-48{
+                font-size: 28px;
+            }
+        }
+    }
+    @include mobile{
+        &_item{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            &:nth-child(2){
+                flex-direction: row;
+            }
+            &-icon{
+                width: 32px;
+                height: 32px;
+            }
+            &-title{
+                position: absolute;
+                margin: 0px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .text-primary{
+                color: #fff;
+            }
+        }
+    }
+    .diamond {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-diamond.svg);
+        @include mobile{
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-diamond-white.svg);
+        }
+      }
+    .sun {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-sun.svg);
+        @include mobile{
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-sun-white.svg);
+        }
+    }
+    .thunder {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-thunder.svg);
+        @include mobile{
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-thunder-white.svg);
+        }
+    }
+    .fz-48{
+        font-weight: bold;
+        font-style: italic;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+//design
+.design{
+    background: url(https://hexschool.github.io/webLayoutTraining1st/week3/bg.png) no-repeat center center/cover;
+    .section-title{
+        color: #fff;
+    }
+}
+.design-list{
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    &_item:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: all .5s;
+    }
+    &_item:hover:before{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    &_item{
+        position: relative;
+        width: 540px;
+        @include pad{
+            width: 330px;
+        }
+        @include mobile{
+            max-width: 345px;
+            width: 100%;
+        }
+        &:first-child{
+            margin-right: 30px;
+            @include mobile{
+                margin: 0 0 16px 0;
+            }
+        }
+        &-title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Roboto', sans-serif;
+        }
+        @include pad{
+            .fz-48{
+                font-size: 32px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.testimonial-list{
+    @include pad{
+        flex-wrap: wrap;
+    }
+    &_item{
+        width: 255px;
+        &-img{
+            width: 345px;
+        }
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+        @include pad{
+            width: 330px;
+            &:not(:last-child){
+                margin-right: 0px;
+            }
+            &:first-child{
+                margin-bottom: 28px;
+            }
+            &:nth-child(odd){
+                margin-right: 30px;
+            }
+        }
+        @include mobile{
+            width: 345px;
+            &:first-child{
+                margin-bottom: 0px;
+            }
+            &:nth-child(odd){
+                margin-right: 0px;
+            }
+            &:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }
+        .card{
+            padding: 14px 16px;
+            border: 1px solid #DEE2E6;
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 7px;
+            }
+            .text{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .time{
+                font-size: 14px;
+                color: #707070;
+            }
+        }
+    }
+}
+//contact
+.contact{
+    background-color: $tertiary;
+    .section-title{
+        margin-bottom: 24px;
+        color: #000;
+    }
+    .fz-20{
+        @include pad{
+            font-size: 16px;
+        }
+    }
+    .form{
+        width: 730px;
+        @include pad{
+            width: 430px;
+        }
+        @include pad{
+            max-width: 345px;
+            width: 100%;
+        }
+        margin: 0 auto;
+        .input-group{
+            margin-bottom: 16px;
+            .form-control{
+                width: 100%;
+                display: block;
+                font-size: 16px;
+                padding: 14px 16px;
+                border: 1px solid #000;
+                background: transparent;
+                @include pad{
+                    font-size: 14px;
+                    padding: 8px 12px;
+                }
+            }
+        }
+        .form-check{
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 42px;
+            @include pad{
+                margin-bottom: 20px;
+            }
+            &-input{
+                display: none;
+            }
+            &-label{
+                cursor: pointer;
+                @include pad{
+                    font-size: 14px;
+                }
+            }
+            &-label:before{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #000;
+                @include pad{
+                    top: 4px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .form-check-input:checked + .form-check-label:after {
+                display: block;
+            }
+            &-label:after{
+                content:'✔';
+                display: none;
+                top: -13px;
+                left: 0;
+                position: absolute;
+                color: $primary;
+                font-size: 30px;
+            }
+        }
+        .submit-btn{
+            display: block;
+            margin: 0 auto;
+            width: 350px;
+            font-size: 16px;
+            color: #fff;
+            background: $primary;
+            padding: 16px 0;
+            border: none;
+            cursor: pointer;
+            @include pad{
+                width: 210px;
+                padding: 8px 0;
+            }
+            @include mobile{
+                width: 165px;
+            }
+        }
+    }
+}

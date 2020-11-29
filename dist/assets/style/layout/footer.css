@@ -1,0 +1,157 @@
+.footer-container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 48px 0 28.5px 0;
+}
+
+.footer-contact {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 24px;
+}
+
+.footer-menu ul:first-child li {
+  padding-right: 48px;
+}
+
+.footer-menu ul:last-child li {
+  padding-left: 32px;
+}
+
+.footer-contact li:last-child {
+  padding-bottom: 22px;
+}
+
+.footer-contact .contact-phone, .footer-contact .contact-mail {
+  position: relative;
+  padding-bottom: 18px;
+  font-size: 36px;
+}
+
+.footer-contact .contact-phone img {
+  width: 44px;
+}
+
+.footer-contact .contact-mail img {
+  width: 48px;
+}
+
+.footer-contact .contact-phone a, .footer-contact .contact-mail a {
+  position: absolute;
+  left: 65px;
+}
+
+.d-none {
+  display: none;
+}
+
+.footer-container .footer-copyright p {
+  font-size: 16px;
+  margin-left: 38px;
+}
+
+.footer-container .footer-copyright li {
+  margin-left: 62px;
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    padding: 40px 39px;
+  }
+  .footer-menu ul:first-child li {
+    padding-right: 40px;
+  }
+  .footer-menu ul:last-child li {
+    padding-left: 32px;
+  }
+  .footer-icon img {
+    width: 24px;
+  }
+  .footer-contact .contact-phone img {
+    width: 24px;
+  }
+  .footer-contact .contact-mail img {
+    width: 32px;
+  }
+  .contact-phone a, .contact-mail a {
+    font-size: 20px;
+  }
+  .footer-container .footer-copyright .footer-copyright-text a {
+    display: none;
+  }
+  .footer-container .footer-copyright p {
+    margin: 0;
+  }
+  .footer-container .footer-copyright li {
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    padding: 24px 15px 21px 15px;
+  }
+  .footer-menu {
+    display: none;
+  }
+  .footer-container .footer-contact {
+    position: relative;
+  }
+  .footer-contact .contact-phone img, .footer-contact .contact-mail img {
+    width: 20px;
+  }
+  .footer-contact .contact-phone a, .footer-contact .contact-mail a {
+    font-size: 16px;
+    left: 25px;
+  }
+  .footer-container .footer-contact .mobile-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .footer-container .footer-contact .mobile-only li {
+    margin-left: 24px;
+  }
+  .footer-container .footer-contact .mobile-only img {
+    width: 24px;
+  }
+  .footer-container .footer-copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-container .footer-copyright .footer-copyright-text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .footer-container .footer-copyright .footer-copyright-text a {
+    margin-left: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer-container .footer-copyright .footer-copyright-text img {
+    width: 46px;
+    position: relative;
+    top: 60px;
+  }
+  .footer-container .footer-copyright p {
+    font-size: 14px;
+  }
+  .footer-container .footer-copyright ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-container .footer-copyright li {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
